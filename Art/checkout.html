@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checkout — Art Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container header-row"><h1 class="logo"><a href="index.html">Art Hub</a></h1></header>
+  <main class="container">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label>Full name<br><input required name="name"></label><br>
+      <label>Email<br><input type="email" required name="email"></label><br>
+      <label>Address<br><textarea required name="address"></textarea></label><br>
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+    <div id="result"></div>
+  </main>
+  <script>
+  document.getElementById('checkout-form').addEventListener('submit', e=>{
+    e.preventDefault();
+    localStorage.removeItem('cart');
+    document.getElementById('result').innerHTML = '<p>Thank you — order placed! (demo)</p>';
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #eef1f7;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: linear-gradient(135deg, #6c63ff, #5ec3ff, #ff7edb, #ffa45b);
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease infinite;
+
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+
+    .container {
+        width: 350px;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        border: 2px solid #d7d7d7;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .container label {
+        display: block;
+        margin-bottom: 5px;
+        color: #444;
+        font-size: 14px;
+    }
+
+    .container input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .container button {
+        width: 100%;
+        padding: 10px;
+        background: #5c6bc0;
+        border: none;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .container button:hover {
+        background: #3f4da0;
+    }
+
+    .footer {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 13px;
+    }
+</style>
+</head>
+<body>
+<div class="container" style="padding:20px">
+  <h2>Login</h2>
+  <form onsubmit="event.preventDefault(); alert('Demo login — replace with real auth.');">
+    <label>Username<br><input name="username" required></label><br>
+    <label>Password<br><input type="password" required></label><br>
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+</body>
+</html>
